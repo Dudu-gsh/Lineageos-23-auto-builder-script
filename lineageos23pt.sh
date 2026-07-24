@@ -35,7 +35,7 @@ sleep 3
 }
 ask_zip() {
   echo "Por favor,baixe o seu .zip do instalador,porque precisa extrair coisas do .zip"
-echo "Escreva onde o .zip ta,exemplo:$HOME/Downloads/lineage.zip"
+echo "Escreva onde o .zip ta,exemplo:/home/meuuser/lineage.zip"
 read -rp "Escreva aqui:" ZIP 
 }
 
