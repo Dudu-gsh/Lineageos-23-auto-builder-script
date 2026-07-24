@@ -23,14 +23,12 @@ path() {
   echo "What is written above Extract proparitery blobs"
 read -rp "Please,write here:" PASTA
 }
-
 ask_zip() {
   echo "Please,Download the .zip installer"
 echo "Where the file is?"
 echo "Ex:/home/myuser/Lineage_something23.zip"
 read -rp "Write here:" ZIP 
 }
-
 ASK(){
 echo "On the compilation steps,there is one command called breakfast YourDevice,what is there"
 echo "Like rosymary,nx_tab"
@@ -114,7 +112,7 @@ if [[ -f "./extract-files.sh" ]]; then
 elif [[ -f ./extract-files.py ]]; then
    ./extract-files.py "$ZIP"
   else
-  echo "Impprtant file not found!!!
+  echo "Impprtant file not found!!"
   exit 1
   fi
 # Builds
