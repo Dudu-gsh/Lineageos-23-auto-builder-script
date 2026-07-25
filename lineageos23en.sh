@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 #  MIT License
 #
 #  Copyright (c) 2026 Dudu-gsh
@@ -33,7 +34,6 @@ ASK(){
 echo "On the compilation steps,there is one command called breakfast YourDevice,what is there"
 echo "Like rosymary,nx_tab"
 read -rp "What was written there?: " CODENOME
-source build/envsetup.sh
 clear
 echo "This will take a while,so take a nap,take a coffe or something"
 sleep 3
@@ -41,10 +41,8 @@ sleep 3
 CORES=$(( $(nproc) - 2 ))
 (( CORES < 1 )) && CORES=1
 
-set -euo pipefail
-
 # Installs packges
-sudo apt update -y 
+sudo apt update
 sudo apt install -y bc bison build-essential \
 ccache curl flex g++-multilib gcc-multilib git \
 git-lfs gnupg gperf imagemagick protobuf-compiler \
@@ -56,21 +54,15 @@ squashfs-tools xsltproc xxd zip zlib1g-dev \
 python-is-python3
 # create paths and downlaod repo
 mkdir -p ~/bin
+PATH="$HOME/bin:$PATH"
 mkdir -p ~/android/lineage
 
 curl -fLo ~/bin/repo https://storage.googleapis.com/git-repo-downloads/repo
 chmod a+x ~/bin/repo
 clear
-cat <<EOF >> ~/.profile
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-EOF
 # Use ccache
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache 
-source ~/.profile
 # Asks Email and name
 read -rp "What is ur email of the github,is for cloning?" EMAIL 
 read -rp "And ur name,it can be anything?" NAME 
@@ -89,10 +81,11 @@ repo sync -c -j"$CORES"
 clear
 # Downaload more things
 ASK
-if ! breakfast "$CODENOME"; then
+source build/envsetup.sh
+while ! breakfast "$CODENOME"; do
     echo "Error: $CODENOME dont exist or is unsupported"
     ASK
-fi
+done
 ask_zip
 
 while [[ ! -f "$ZIP" ]]; do 

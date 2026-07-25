@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 #  MIT License
 #
 #  Copyright (c) 2026 Dudu-gsh
@@ -27,7 +28,6 @@ ASK(){
 echo "Nos passos de fazer build,vai ta escrito em uma parte breakfast NOME DO SEU DISPOSITIVO"
 echo "Exemplo:rosemary"
 read -rp "Oq que tava la escrito: " CODENOME
-source build/envsetup.sh
 clear
 # Baixa especificacoes
 echo "Agora isso vai demorar,entao tire um soneca,toma cafe ou algo"
@@ -42,10 +42,8 @@ read -rp "Escreva aqui:" ZIP
 CORES=$(( $(nproc) - 2 ))
 (( CORES < 1 )) && CORES=1
 
-set -euo pipefail
-
 # Baixa pacotes
-sudo apt update -y 
+sudo apt update
 sudo apt install -y bc bison build-essential \
 ccache curl flex g++-multilib gcc-multilib git \
 git-lfs gnupg gperf imagemagick protobuf-compiler \
@@ -57,21 +55,15 @@ squashfs-tools xsltproc xxd zip zlib1g-dev \
 python-is-python3
 # Cria pastas e baixa repo
 mkdir -p ~/bin
+PATH="$HOME/bin:$PATH"
 mkdir -p ~/android/lineage
 
 curl -fLo ~/bin/repo https://storage.googleapis.com/git-repo-downloads/repo
 chmod a+x ~/bin/repo
 clear
-cat <<EOF >> ~/.profile
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-EOF
 # Usar ccache
 export USE_CCACHE=1
-export CCACHE_EXEC=/usr/bin/ccache 
-source ~/.profile
+export CCACHE_EXEC=/usr/bin/ccache
 # Pede nome e email pro repo
 read -rp "Me fale seu email do git (E pra o repo pra clonar repositorios)" EMAIL 
 read -rp "E nome (Pode botar oq q vc quiser)" NAME 
@@ -88,11 +80,12 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs 
 repo sync -c -j"$CORES"
 clear
 # Baixa mais coisas
+source build/envsetup.sh
 ASK
-if ! breakfast "$CODENOME"; then
+while ! breakfast "$CODENOME"; do
     echo "Erro:Voce errou na hora que tava digitando ou nao e surportado,ou epe nao consiguiu baixar"
     ASK
-fi
+done
 
 ask_zip
 
