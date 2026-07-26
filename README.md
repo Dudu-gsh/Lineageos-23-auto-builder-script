@@ -2,34 +2,35 @@
 
 [Português](README.md) | [English](README_EN.md)
 
-Olá,bem vindo ao meu repositório,esse repositório contem um builder de LineageOS 23,e eu acho que eu vou adicionar outras versões
+Hello, welcome to my repository! This repository contains a LineageOS 23 builder, and i think i will add way to build other versions.
 
-Se voce quiser que eu adicione algo,crie uma issue ou faça um fork
+Its only for LineageOS 23
+If you want to add something,create a issue or make your fork
 
-Oq isso faz? :Esse script usa ferramentas pra fazer build de LineageOS 23
+What does this do?
+This script installs the required tools and dependencies to build LineageOS 23.
 
-Como baixar o script
+How to download the script
 
 ```bash
 git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 ./menu.sh
 ```
-# Requerimentos recomandadas
-Ubuntu ou debian  mais recente [Lista de provavelmente suportados](OS_LIST)
 
-4 a 8 GB de RAM
+# Recommended Requirements  
+Ubuntu or Debian latest [Probaly supported oses](OS_LIST). 
 
-8 cores 
+8GB of RAM   
+
+4 to 8 cores. 
 #
-Por favor,nao rode o "lineageos23pt.sh" usando bash,porque pode dar erros numa parte do script,entao rode "./lineageos23pt.sh"
 
-Eu criei em inglês e português 
+Plese do not run the other scripts with bash,it will give erros
 
-Eu ainda nao testei no linux,pois eu criei isso no Android,ai ele é fraco. Eu criei isso no tedio
+Theres English and portuguese
 
-E porque voce nao testou no seu pc? :Pq nao tenho
-Eu tentei meu maximo pra deixar isso bom
+I created this on boredom, i dont tested the scripts becuse i dont have propper hardware (I used android to create)
 
 ;D
 
-[Lincença](LINCENSE)
+[Lincense](LINCENSE)
