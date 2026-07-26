@@ -1,6 +1,6 @@
 <h1 align="center">LineageOS 23 auto builder script</h1>
 
-[Português](README.md) | [English](README_EN.md)
+[Português-BR](README_PT.md) | [English](README.md)
 
 Hello, welcome to my repository! This repository contains a LineageOS 23 builder, and i think i will add way to build other versions.
 
@@ -20,6 +20,7 @@ git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 # Recommended Requirements  
 Ubuntu or Debian latest [Probaly supported oses](OS_LIST). 
 
+Note:not all OSes are supported,Please see if your OS of choice is x64 and 
 8GB of RAM   
 
 4 to 8 cores. 
