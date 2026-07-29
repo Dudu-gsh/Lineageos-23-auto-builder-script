@@ -19,8 +19,9 @@ set -euo pipefail
 #  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
+NAO_SEI_OQ_ESCREVE_AQ="cd $OUT"
 path() {
-  echo "Qual é a pasta que debaixo da parte (Extract proprietary blobs)"
+  echo "Qual é a pasta que debaixo da parte \"Extract Proparytery blobls\""
 read -rp "Escreva aqui" PASTA
 }
 
@@ -111,3 +112,4 @@ fi
 # Compila
 croot
 brunch "$CODENOME"
+eval "$NAO_SEI_OQ_ESCREVE_AQ"
