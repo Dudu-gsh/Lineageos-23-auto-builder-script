@@ -22,7 +22,7 @@ set -euo pipefail
 IDK-WHAT-TO-TYPE="cd $OUT"
 
 path() {
-  echo "What is written above Extract proparitery blobs"
+  echo "What is written above \"Extract Proparytery blobls\"
 read -rp "Please,write here:" PASTA
 }
 ask_zip() {
