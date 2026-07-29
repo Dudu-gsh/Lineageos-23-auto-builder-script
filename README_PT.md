@@ -17,7 +17,7 @@ git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 # Requerimentos recomandadas
 Ubuntu ou debian  mais recente [Lista de provavelmente suportados](OS_LIST)
 
-Nota:Nas distros baseadas de Ubuntu,vê se ê x64 e baseado no mais recente,mais debian é so pegar o mais recent
+Nota:Nas distros baseadas de Ubuntu,vê se ê x64 e baseado no mais recente,mais debian é so pegar o mais recent 
 
 4 a 8 GB de RAM
 
