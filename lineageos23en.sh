@@ -19,6 +19,7 @@ set -euo pipefail
 #  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
+IDK-WHAT-TO-TYPE="cd $OUT"
 
 path() {
   echo "What is written above Extract proparitery blobs"
@@ -111,3 +112,4 @@ elif [[ -f ./extract-files.py ]]; then
 # Builds
 croot
 brunch "$CODENOME"
+eval "$IDK-WHAT-TO-TYPE"
