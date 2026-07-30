@@ -117,7 +117,7 @@ clear
 cd "$(find kernel -type d -name "$CODENOME").."
 "$HERE"
 brunch "$CODENOME"
-eval "$IDK_WHAT_TO_TYPE_HERE"
+eval "$NAO_SEI_OQ_ESCREVE_AQ"
    fi
 brunch "$CODENOME"
-eval "$IDK_WHAT_TO_TYPE_HERE"
+eval "$NAO_SEI_OQ_ESCREVE_AQ"
