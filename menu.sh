@@ -39,14 +39,28 @@ sleep 1
 read -rp "Escreva  /  Write:" lang
 
 if [[ $lang == pt ]]; then
+read -rp "Voce vai querer KernelSU?" IDK
+
+    if [[ $IDK == s ]]; then
+        echo "Okay"
+        chmod +x lineageos23pt.sh
+        ./lineageos23pt.sh --KERNELSU
+    fi
+
 echo "Bem vindo ao meu lineageos 23 builder"
 chmod +x $(pwd)/lineageos23pt.sh
 ./lineageos23pt.sh
 echo "Agora voce tem um build do lineageos 23"
-exit 1
+exit 0
 
 elif [[ $lang == en ]]; then 
 echo "Welcome to my lineageos 23 builder"
+    if [[ $IDK == s ]]; then
+        echo "Okay"
+        chmod +x lineageos23en.sh
+        ./lineageos23en.sh --KERNELSU
+    fi
+
 chmod +x lineageos23en.sh
 ./lineageos23en.sh
 echo "Now you have a build of lineageos 23"

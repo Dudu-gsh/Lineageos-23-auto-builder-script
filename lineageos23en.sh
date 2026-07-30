@@ -19,6 +19,7 @@ set -euo pipefail
 #  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
+HERE="$(pwd)/kernelsu.sh"
 IDK_WHAT_TO_TYPE_HERE="cd $OUT"
 
 path() {
@@ -111,5 +112,12 @@ elif [[ -f ./extract-files.py ]]; then
   fi
 # Builds
 croot
+clear
+   if [[ "$@" == --KERNELSU ]]; then
+cd "$(find kernel -type d -name "$CODENOME").."
+"$HERE"
+brunch "$CODENOME"
+eval "$IDK_WHAT_TO_TYPE_HERE"
+   fi
 brunch "$CODENOME"
 eval "$IDK_WHAT_TO_TYPE_HERE"
