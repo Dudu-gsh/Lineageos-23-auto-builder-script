@@ -39,7 +39,8 @@ sleep 1
 read -rp "Escreva  /  Write:" lang
 
 if [[ $lang == pt ]]; then
-read -rp "Voce vai querer KernelSU?" IDK
+echo "Voce vai querer adicionar KernelSU ao seu kernel?"
+read -rp "(S/N)" IDK
 
     if [[ $IDK == s ]]; then
         echo "Okay"
@@ -55,6 +56,8 @@ exit 0
 
 elif [[ $lang == en ]]; then 
 echo "Welcome to my lineageos 23 builder"
+echo "You want to add KernelSU to ypur Kernel?"
+read -rp "(Y/N)"
     if [[ $IDK == s ]]; then
         echo "Okay"
         chmod +x lineageos23en.sh
