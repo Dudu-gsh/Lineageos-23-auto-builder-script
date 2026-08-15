@@ -26,12 +26,14 @@ path() {
   echo "What is written above \"Extract Proparytery blobls\""
 read -rp "Please,write here:" PASTA
 }
+
 ask_zip() {
   echo "Please,Download the .zip installer"
 echo "Where the file is?"
 echo "Ex:/home/myuser/Lineage_something23.zip"
 read -rp "Write here:" ZIP 
 }
+
 ASK(){
 echo "On the compilation steps,there is one command called breakfast YourDevice,what is there"
 echo "Like rosymary,nx_tab"
@@ -40,6 +42,7 @@ clear
 echo "This will take a while,so take a nap,take a coffe or something"
 sleep 3
 }
+
 CORES=$(( $(nproc) - 2 ))
 (( CORES < 1 )) && CORES=1
 
@@ -115,7 +118,7 @@ croot
 clear
    if [[ "$@" == --KERNELSU ]]; then
 cd "$(find kernel -type d -name "$CODENOME").."
-"$HERE"
+exec "$HERE"
 brunch "$CODENOME"
 eval "$IDK_WHAT_TO_TYPE_HERE"
    fi

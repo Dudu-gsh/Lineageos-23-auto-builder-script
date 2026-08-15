@@ -21,6 +21,7 @@ set -euo pipefail
 #  SOFTWARE.
 HERE="$(pwd)/kernelsu.sh"
 NAO_SEI_OQ_ESCREVE_AQ="cd $OUT"
+
 path() {
   echo "Qual é a pasta que debaixo da parte \"Extract Proparytery blobls\""
 read -rp "Escreva aqui" PASTA
@@ -28,13 +29,14 @@ read -rp "Escreva aqui" PASTA
 
 ASK(){
 echo "Nos passos de fazer build,vai ta escrito em uma parte breakfast NOME DO SEU DISPOSITIVO"
-echo "Exemplo:rosemary"
+echo "Exemplo:rosemary,nx_tab"
 read -rp "Oq que tava la escrito: " CODENOME
 clear
 # Baixa especificacoes
 echo "Agora isso vai demorar,entao tire um soneca,toma cafe ou algo"
 sleep 3
 }
+
 ask_zip() {
   echo "Por favor,baixe o seu .zip do instalador,porque precisa extrair coisas do .zip"
 echo "Escreva onde o .zip ta,exemplo:/home/meuuser/lineage.zip"
@@ -115,7 +117,7 @@ croot
 clear
    if [[ "$@" == --KERNELSU ]]; then
 cd "$(find kernel -type d -name "$CODENOME").."
-"$HERE"
+exec "$HERE"
 brunch "$CODENOME"
 eval "$NAO_SEI_OQ_ESCREVE_AQ"
    fi

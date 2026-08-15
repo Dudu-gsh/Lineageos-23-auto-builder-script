@@ -15,15 +15,15 @@ git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 ./menu.sh
 ```
 # Requerimentos recomandadas
-Ubuntu ou debian  mais recente [Lista de provavelmente suportados](OS_LIST)
+Ubuntu 24 ou debian  mais recente [Lista de provavelmente suportados](OS_LIST)
 
-Nota:Nas distros baseadas de Ubuntu,vê se ê x64 e baseado no mais recente,mais debian é so pegar o mais recente
+Nota:Nas distros baseadas de Ubuntu 24,vê se ê x64 e baseado no mais recente,mais debian,só baixa o mais recente
 
-4 a 8 GB de RAM
+16GB de RAM
 
 8 cores 
 #
-Por favor,nao rode o "lineageos23pt.sh" usando bash,porque pode dar erros numa parte do script,entao rode "./lineageos23pt.sh"
+Por favor,nao rode o "lineageos23pt.sh" usando bash,porque pode dar erros numa parte do script,entao rode "./lineageos23pt.sh ou rode com o menu.sh"
 
 Eu criei em inglês e português 
 

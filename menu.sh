@@ -32,13 +32,13 @@ echo ""
 echo "1) English "
 echo "2) Portugues"
 echo ""
-echo "Aviso,quando for escrever,escreva pt pra portugues ou en pra ingles"
+echo "Aviso,quando for escrever,escreva 1 pra portugues ou 2 pra ingles"
 sleep 1
-echo "Warnig,when your gonna wtite,write pt for portuguese or en for english"
+echo "Warnig,when your gonna wtite,write 1 for portuguese or 2 for english"
 sleep 1
 read -rp "Escreva  /  Write:" lang
 
-if [[ $lang == pt ]]; then
+if [[ $lang == 1 ]]; then
 echo "Voce vai querer adicionar KernelSU ao seu kernel?"
 read -rp "(S/N)" IDK
 
@@ -54,7 +54,7 @@ chmod +x $(pwd)/lineageos23pt.sh
 echo "Agora voce tem um build do lineageos 23"
 exit 0
 
-elif [[ $lang == en ]]; then 
+elif [[ $lang == 2 ]]; then 
 echo "Welcome to my lineageos 23 builder"
 echo "You want to add KernelSU to ypur Kernel?"
 read -rp "(Y/N)"
