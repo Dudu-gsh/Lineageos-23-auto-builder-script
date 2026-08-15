@@ -19,8 +19,7 @@ set -euo pipefail
 #  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
-HERE="$(pwd)/kernelsu.sh"
-IDK_WHAT_TO_TYPE_HERE="cd $OUT"
+HERE="$(pwd)/"
 
 path() {
   echo "What is written above \"Extract Proparytery blobls\""
@@ -116,11 +115,14 @@ elif [[ -f ./extract-files.py ]]; then
 # Builds
 croot
 clear
-   if [[ "$@" == --KERNELSU ]]; then
+   if [[ "$USE_KERNELSU" == true ]]; then
+cd "$HERE"
+git clone https://github.com/Dudu-gsh/KernelSU_moddifyd.git
+cd ~/android/lineage/
 cd "$(find kernel -type d -name "$CODENOME").."
-exec "$HERE"
-brunch "$CODENOME"
-eval "$IDK_WHAT_TO_TYPE_HERE"
+"$HERE"KernelSU_moddifyd/kernel/setup.sh
+croot
    fi
 brunch "$CODENOME"
-eval "$IDK_WHAT_TO_TYPE_HERE"
+cd "$OUT"
+source "$HERE"lineageos23en.sh
