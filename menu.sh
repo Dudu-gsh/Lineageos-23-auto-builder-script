@@ -43,19 +43,19 @@ echo "Voce vai querer adicionar KernelSU ao seu kernel?"
 echo "Ele é da versao de surporte sem GKI para 4.14 pra baixo"
 read -rp "(S/N)" KERNELSU
 
-    if [[ $KERNELSU == S ]]; then
+    if [[ $KERNELSU =~ ^[Ss]$ ]]; then
         echo "Tabom"
         chmod +x lineageos23pt.sh
-        USE_KERNELSU="true"
+        export USE_KERNELSU=true ./lineageos23pt.sh
         echo "Bem vindo ao meu lineageos 23 builder"
-        ./lineageos23pt.sh
+        export USE_KERNELSU=false
+./lineageos23pt.sh
         echo "Agora voce tem um build do lineageos 23"
         exit 0
     else
         echo "Bem vindo ao meu lineageos 23 builder"
         chmod +x $(pwd)/lineageos23pt.sh
-        ./lineageos23pt.sh
-        USE_KERNELSU="false"
+        export USE_KERNELSU=false ./lineageos23pt.sh
         echo "Agora voce tem um build do lineageos 23"
         exit 0
     fi
@@ -65,15 +65,15 @@ echo "Welcome to my lineageos 23 builder"
 echo "You want to add KernelSU to ypur Kernel?"
 echo "But it is for NO GKI"
 read -rp "(Y/N)" KERNELSU
-    if [[ $KERNELSU == Y ]]; then
+    if [[ $KERNELSU =~ ^[Yy]$ ]]; then
         echo "Okay"
         chmod +x lineageos23en.sh
-        USE_KERNELSU="true"
-        ./lineageos23en.sh 
+        echo "Welcome to my lineageos 23 builder"
+        export USE_KERNELSU=true ./lineageos23pt.sh
+        
     else
         chmod +x lineageos23en.sh
-        USE_KERNELSU="false"
-        ./lineageos23en.sh
+        export USE_KERNELSU=false ./lineageos23pt.sh
         echo "Now you have a build of lineageos 23"
 else 
 echo "Nao entendi meu fi."
