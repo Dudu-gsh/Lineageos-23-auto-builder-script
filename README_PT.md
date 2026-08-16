@@ -14,6 +14,14 @@ Como baixar o script
 git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 ./menu.sh
 ```
+ou:
+```bash
+curl -L https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script/archive/refs/heads/main.zip -o Lineageos-23-auto-builder-script-main.zip
+unzip Lineageos-23-auto-builder-script-main.zip
+cd Lineageos-23-auto-builder-script-main
+./menu.sh
+```
+O primeiro é muito recomendado
 # Requerimentos recomandadas
 Ubuntu 24 ou debian  mais recente [Lista de provavelmente suportados](OS_LIST)
 

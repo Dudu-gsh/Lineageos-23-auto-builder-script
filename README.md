@@ -17,12 +17,15 @@ git clone https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script.git
 ./menu.sh
 ```
 or:
+
 ```bash
 curl -L https://github.com/Dudu-gsh/Lineageos-23-auto-builder-script/archive/refs/heads/main.zip -o Lineageos-23-auto-builder-script-main.zip
 unzip Lineageos-23-auto-builder-script-main.zip
 cd Lineageos-23-auto-builder-script-main
 ./menu.sh
 ```
+
+First one is recommended
 
 # Recommended Requirements  
 Ubuntu 24 or Debian latest [Probaly supported oses](OS_LIST). 
