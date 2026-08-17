@@ -42,4 +42,9 @@ Eu tentei meu maximo pra deixar isso bom
 
 ;D
 
+Para fazer:
+- [x] Suporte do KernelSU
+- [ ] Adicionar suporte para dispositivo GKI (Sobre do KernelSU)
+- [ ] Adicionar suporte a fazer signed builds
+
 [Lincença](LINCENSE)

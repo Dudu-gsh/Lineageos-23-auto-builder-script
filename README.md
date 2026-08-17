@@ -47,4 +47,9 @@ I created this on boredom, i dont tested the scripts becuse i dont have propper 
 
 ;D
 
+To do:
+- [x] Add suport to KernelSU
+- [ ] Add suport to KernelSU GKI
+- [ ] Add a way to build signed builds
+
 [Lincense](LINCENSE)
