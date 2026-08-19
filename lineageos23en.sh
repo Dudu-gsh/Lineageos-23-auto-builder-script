@@ -118,11 +118,18 @@ clear
    if [[ "$USE_KERNELSU" == true ]]; then
 cd "$HERE"
 git clone https://github.com/Dudu-gsh/KernelSU_moddifyd.git
+cd KernelSU_moddifyd
+chmod +x kernel/setup.sh
 cd ~/android/lineage/
 cd "$(find kernel -type d -name "$CODENOME").."
 "$HERE"KernelSU_moddifyd/kernel/setup.sh
 croot
    fi
+read -rp "Want to compile a Signed Build (Y/N)" SIGNED
+   if [[ $SIGNED =~ ^[Yy]$ ]]; then 
+cd "$HERE"
+chmod +x sign_please
+./sign_please.sh
+
+   else
 brunch "$CODENOME"
-cd "$OUT"
-source "$HERE"lineageos23en.sh

@@ -4,6 +4,9 @@
 
 Olá,bem vindo ao meu repositório,esse repositório contem um builder de LineageOS 23,e eu acho que eu vou adicionar outras versões
 
+O KernelSU é para NAO GKI DISPOSITIVOS
+E é para kernels abaixo de 4.14
+
 Se voce quiser que eu adicione algo,crie uma issue ou faça um fork
 
 Oq isso faz? :Esse script usa ferramentas pra fazer build de LineageOS 23

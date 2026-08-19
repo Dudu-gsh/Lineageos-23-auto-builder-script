@@ -46,16 +46,15 @@ read -rp "(S/N)" KERNELSU
     if [[ $KERNELSU =~ ^[Ss]$ ]]; then
         echo "Tabom"
         chmod +x lineageos23pt.sh
-        export USE_KERNELSU=true ./lineageos23pt.sh
+        USE_KERNELSU=true ./lineageos23pt.sh
         echo "Bem vindo ao meu lineageos 23 builder"
-        export USE_KERNELSU=false
-./lineageos23pt.sh
+        USE_KERNELSU=false ./lineageos23pt.sh
         echo "Agora voce tem um build do lineageos 23"
         exit 0
     else
         echo "Bem vindo ao meu lineageos 23 builder"
         chmod +x $(pwd)/lineageos23pt.sh
-        export USE_KERNELSU=false ./lineageos23pt.sh
+        USE_KERNELSU=false ./lineageos23pt.sh
         echo "Agora voce tem um build do lineageos 23"
         exit 0
     fi
@@ -69,7 +68,7 @@ read -rp "(Y/N)" KERNELSU
         echo "Okay"
         chmod +x lineageos23en.sh
         echo "Welcome to my lineageos 23 builder"
-        export USE_KERNELSU=true ./lineageos23pt.sh
+        USE_KERNELSU=true ./lineageos23pt.sh
         
     else
         chmod +x lineageos23en.sh

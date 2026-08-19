@@ -124,4 +124,3 @@ croot
    fi
 brunch "$CODENOME"
 cd "$OUT"
-source "$HERE"lineageos23pt.sh

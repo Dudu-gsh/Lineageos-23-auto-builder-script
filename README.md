@@ -4,6 +4,9 @@
 
 Hello, welcome to my repository! This repository contains a LineageOS 23 builder, and i think i will add way to build other versions.
 
+The KernelSU is only supported for none GKI devices
+And its for less then 4.14 of kernel
+
 Its only for LineageOS 23
 If you want to add something,create a issue or make your fork
 
