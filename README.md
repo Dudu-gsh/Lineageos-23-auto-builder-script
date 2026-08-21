@@ -53,6 +53,6 @@ I created this on boredom, i dont tested the scripts becuse i dont have propper 
 To do:
 - [x] Add suport to KernelSU
 - [ ] Add suport to KernelSU GKI
-- [ ] Add a way to build signed builds
+- [x] Add a way to build signed builds
 
 [Lincense](LINCENSE)

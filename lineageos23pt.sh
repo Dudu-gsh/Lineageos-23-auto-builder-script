@@ -122,5 +122,11 @@ cd "$(find kernel -type d -name "$CODENOME").."
 "$HERE"KernelSU_moddifyd/kernel/setup.sh
 croot
    fi
+read -rp "Want to compile a Signed Build (Y/N)" SIGNED
+   if [[ $SIGNED =~ ^[Yy]$ ]]; then 
+cd "$HERE"
+chmod +x sign_please
+./assina_pls.sh "$EMAIL"
+
+   else
 brunch "$CODENOME"
-cd "$OUT"

@@ -129,7 +129,7 @@ read -rp "Want to compile a Signed Build (Y/N)" SIGNED
    if [[ $SIGNED =~ ^[Yy]$ ]]; then 
 cd "$HERE"
 chmod +x sign_please
-./sign_please.sh "$EMAIL"
+./sign_pls.sh "$EMAIL"
 
    else
 brunch "$CODENOME"
